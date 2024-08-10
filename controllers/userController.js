@@ -16,17 +16,17 @@ const create = async (req,res) =>{
         doc.password = password;
         await doc.save();
 
-        mail(
-            {
-                subject:"New User",
-                text:"User Created Successfully",
-                html:`<ul>
-                    <li>Name : ${name}</li>
-                    <li>Email : ${email}</li>
-                </ul>`,
-                to: 'huzaifa@aptechnorth.edu.pk'
-            }
-        )
+        // mail(
+        //     {
+        //         subject:"New User",
+        //         text:"User Created Successfully",
+        //         html:`<ul>
+        //             <li>Name : ${name}</li>
+        //             <li>Email : ${email}</li>
+        //         </ul>`,
+        //         to: 'huzaifa@aptechnorth.edu.pk'
+        //     }
+        // )
 
         res.status(200).json({message:"Saved Succussfully"});
     }catch(err){

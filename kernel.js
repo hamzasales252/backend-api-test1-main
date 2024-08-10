@@ -1,6 +1,8 @@
 
+    const WorkoutRouter = require('./routes/WorkoutRoute');
+    
 
-    const productRouter = require('./routes/productRoute');
+
     
     //Express
 const express = require("express");
@@ -31,5 +33,7 @@ module.exports = app;
 
  
     
-    app.use('/api/product', productRouter);
+ 
+
+    app.use('/api/workout', WorkoutRouter);
     
